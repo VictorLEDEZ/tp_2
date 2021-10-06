@@ -107,17 +107,17 @@ def transform_peano_in_img(signal, dSize):
     return img
 
 
-def bruit_gauss2(X,cl1,cl2,m1,sig1,m2,sig2):
+def bruit_gauss2(X, cl1, cl2, m1, sig1, m2, sig2):
     return (X == cl1) * np.random.normal(m1, sig1, X.shape) + (X == cl2) * np.random.normal(m2, sig2, X.shape)
 
 
-def MAP_MPM2(Y,cl1,cl2,p1,p2,m1,sig1,m2,sig2):
+def MAP_MPM2(Y, cl1, cl2, p1, p2, m1, sig1, m2, sig2):
     return np.where((p1*norm.pdf(Y, m1, sig1)) > (p2*norm.pdf(Y, m2, sig2)), cl1, cl2)
 
 
-def calc_probaprio2(X,cl1,cl2):
+def calc_probaprio2(X, cl1, cl2):
     return np.sum(X==cl1)/X.size, np.sum(X==cl2)/X.size
 
 
-def taux_erreur(A,B):
+def taux_erreur(A, B):
     return np.count_nonzero(A!=B)/A.size
