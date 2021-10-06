@@ -1,6 +1,6 @@
-import numpy as np
-from math import log2, sqrt
 from scipy.stats import norm
+from math import log2, sqrt
+import numpy as np
 
 
 def get_line_index(dSize):
