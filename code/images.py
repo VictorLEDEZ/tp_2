@@ -1,6 +1,6 @@
 import cv2 as cv
 
-from utils import line_transform_img
+from .utils import line_transform_img
 
 def load_image_1d(path):
     return line_transform_img(cv.cvtColor(cv.imread('./images/' + str(path) + '.bmp'), cv.COLOR_BGR2GRAY))

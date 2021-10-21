@@ -1,2 +1,3 @@
-def estim_param_EM_indep(iter, Y, p1, p2, m1, sig1, m2, sig2):
-    return 1
+def estim_param_EM_indep(iterations, Y, p1_initial, p2_initial, m1_initial, sig1_initial, m2_initial, sig2_initial):
+    for i in range(0, iterations):
+        print(i)
